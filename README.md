@@ -39,7 +39,9 @@ while (TRUE) {　　　　　　　　　　　　　　　　　  /* repeat for
 
 }
 ```
-To get the layout that we generally see in CLIs such as: ![Image of Linux Terminal](/images/ss1.png) we have the `type_prompt.c` which uses commands like getuid() gethostname() and getcwd() to obtain a similar looking layout:
+To get the layout that we generally see in CLIs such as: 
+![Image of Linux Terminal](/images/ss1.png) 
+we have the `type_prompt.c` which uses commands like getuid() gethostname() and getcwd() to obtain a similar looking layout:
 ![Image of type prompt of tiniShell](/images/ss2.png)
 
 ### Reading commands
@@ -47,7 +49,7 @@ To get the layout that we generally see in CLIs such as: ![Image of Linux Termin
 
 UPDATE:
 using a buffered readLine now without fgets to avoid memory leak, no need to worry for dynamic memory allocation but this functionality requires libreadline5-dev. To facilitate debugging user still has the option to choose what kind of input they require. For fgets() `make tiniShell_r` should be used.
-33
+
 ### Built in Commands
 Built in Commands are required because commands like cd, pushd, exit, history, export etc cannot exist as executable commands inside a child an need to be built into the shell using system calls (example:`chdir()` for `cd`). The analysis and processing of builtin commands should be a function of the interpreter so the main function has to be modified as follows:
 ```c
@@ -60,11 +62,11 @@ The following commands are built into tiniShell with proper error handling: `cd`
 ## Advanced Functions: Background Execution I/O redirection and piping
 I would not go into details about how these function are implemented but would only document their proper usage.
 Note: My interpreter is not robust and only handles legal input
-Background Processing:
+* Background Processing:
 ![ss of bg exec](/images/ss4.png)
-I/O Redirection:
+* I/O Redirection:
 ![ss of io redirection](/images/ss5.png)
-Piping:
+* Piping:
 ![ss of piping](/images/ss6.png)
 
 
