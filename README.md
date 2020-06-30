@@ -39,7 +39,7 @@ while (TRUE) {　　　　　　　　　　　　　　　　　  /* repeat for
 
 }
 ```
-To get the layout that we generally see in CLIs such as: 
+To get the layout that we generally see in CLIs such as:
 ![Image of Linux Terminal](/images/ss1.png) 
 we have the `type_prompt.c` which uses commands like getuid() gethostname() and getcwd() to obtain a similar looking layout:
 ![Image of type prompt of tiniShell](/images/ss2.png)
