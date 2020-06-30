@@ -61,7 +61,6 @@ The following commands are built into tiniShell with proper error handling: `cd`
 
 ## Advanced Functions: Background Execution I/O redirection and piping
 I would not go into details about how these function are implemented but would only document their proper usage.
-Note: My interpreter is not robust and only handles legal input
 * Background Processing:</br>
 ![ss of bg exec](/images/ss4.png)
 * I/O Redirection:</br>
