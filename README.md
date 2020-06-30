@@ -39,8 +39,8 @@ while (TRUE) {　　　　　　　　　　　　　　　　　  /* repeat for
 
 }
 ```
-To get the layout that we generally see in CLIs such as:
-![Image of Linux Terminal](/images/ss1.png) 
+To get the layout that we generally see in CLIs such as:</br>
+![Image of Linux Terminal](/images/ss1.png) </br>
 we have the `type_prompt.c` which uses commands like getuid() gethostname() and getcwd() to obtain a similar looking layout:
 ![Image of type prompt of tiniShell](/images/ss2.png)
 
@@ -56,17 +56,17 @@ Built in Commands are required because commands like cd, pushd, exit, history, e
 if (buildin_command(command,parameters))
      continue ;
 ```
-The following commands are built into tiniShell with proper error handling: `cd`, `exit`,`quit`, and `about`. Their implementation can be found in `builtin_command.c`.
+The following commands are built into tiniShell with proper error handling: `cd`, `exit`,`quit`, and `about`. Their implementation can be found in `builtin_command.c`.</br>
 ![ss of builtin cmds](/images/ss3.png)
 
 ## Advanced Functions: Background Execution I/O redirection and piping
 I would not go into details about how these function are implemented but would only document their proper usage.
 Note: My interpreter is not robust and only handles legal input
-* Background Processing:
+* Background Processing:</br>
 ![ss of bg exec](/images/ss4.png)
-* I/O Redirection:
+* I/O Redirection:</br>
 ![ss of io redirection](/images/ss5.png)
-* Piping:
+* Piping:</br>
 ![ss of piping](/images/ss6.png)
 
 
