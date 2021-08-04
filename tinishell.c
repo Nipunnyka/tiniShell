@@ -41,7 +41,7 @@ void proc(void)
     buffer = malloc(sizeof(char) * MAXLINE);
     if(parameters == NULL || buffer == NULL)
     {
-        printf("Wshell error:malloc failed.\n");
+        printf("tinishell error:malloc failed.\n");
         return;
     }
 	//arg[0] is command
